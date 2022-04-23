@@ -1,1 +1,123 @@
+--[[
 
+//Inject Notification Made By: Marcel_Wakacje#1054\\
+//Executor: https://asteroidteam.nicepage.io/Download.html\\
+
+--]]
+
+-- Instances:
+
+local Notification = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Line = Instance.new("Frame")
+local Fixer = Instance.new("Frame")
+local TextN = Instance.new("TextLabel")
+local NameW = Instance.new("TextLabel")
+
+--Properties:
+
+Notification.Name = "Notification"
+Notification.Parent = game.CoreGui
+Notification.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = Notification
+Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.81099999, 0, 0.859000027, 0)
+Main.Size = UDim2.new(0, 230, 0, 67)
+Main.ZIndex = 2
+
+UICorner.Parent = Main
+
+Line.Name = "Line"
+Line.Parent = Main
+Line.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+Line.BorderColor3 = Color3.fromRGB(0, 0, 189)
+Line.BorderSizePixel = 0
+Line.Position = UDim2.new(-0.000857145875, 0, 0.99027133, 0)
+Line.Size = UDim2.new(0, 230, 0, 2)
+Line.ZIndex = 2
+
+Fixer.Name = "Fixer"
+Fixer.Parent = Main
+Fixer.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Fixer.BorderSizePixel = 0
+Fixer.Position = UDim2.new(0, 0, 0.870832324, 0)
+Fixer.Size = UDim2.new(0, 230, 0, 8)
+
+TextN.Name = "TextN"
+TextN.Parent = Main
+TextN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextN.BackgroundTransparency = 1.000
+TextN.BorderSizePixel = 0
+TextN.Position = UDim2.new(0, 0, 0.288888961, 0)
+TextN.Size = UDim2.new(0, 229, 0, 46)
+TextN.Font = Enum.Font.SourceSansBold
+TextN.Text = "Injected!"
+TextN.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextN.TextSize = 16.000
+
+NameW.Name = "NameW"
+NameW.Parent = Main
+NameW.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameW.BackgroundTransparency = 1.000
+NameW.BorderSizePixel = 0
+NameW.Position = UDim2.new(0.0304347817, 0, 0, 0)
+NameW.Size = UDim2.new(0, 222, 0, 26)
+NameW.Font = Enum.Font.SourceSansBold
+NameW.Text = "Asteroid X"
+NameW.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameW.TextSize = 16.000
+NameW.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts:
+
+local function IBAWZW_fake_script() -- Notification.Notify 
+	local script = Instance.new('LocalScript', Notification)
+
+	--[[
+	//Inject Notification Made By: Marcel_Wakacje#1054\\
+	//Executor: https://asteroidteam.nicepage.io/Download.html\\
+	--]]
+	
+	local Main = script.Parent.Main
+	local Line = Main.Line
+	local Fixer = Main.Fixer
+	local Text = Main.TextN
+	local Name = Main.NameW
+	local Run = game:GetService("RunService")
+	
+	Main.Position = UDim2.new(1.250, 0,0.859, 0)
+	wait(0.2)
+	
+	repeat until game:IsLoaded()
+	
+	wait(0.1)
+	
+	Main:TweenPosition(UDim2.new(0.811, 0,0.859, 0))
+	
+	function Transparent()
+		Run.RenderStepped:Connect(function()
+			if Main.Transparency ~= 1 then
+				wait(0.1)
+				-- //Frames\\
+				Main.Transparency = Main.Transparency + 0.1
+				Fixer.Transparency = Fixer.Transparency + 0.1
+				Line.Transparency = Line.Transparency + 0.1
+				-- //Text\\
+				Text.TextTransparency = Text.TextTransparency + 0.1
+				Name.TextTransparency = Name.TextTransparency + 0.1
+			end
+		end)
+	end
+	
+	wait(2)
+	
+	Transparent()
+	
+	wait(1)
+	script.Parent:Destroy()
+end
+coroutine.wrap(IBAWZW_fake_script)()
