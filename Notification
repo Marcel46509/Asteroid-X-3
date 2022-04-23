@@ -58,6 +58,7 @@ TextN.Font = Enum.Font.SourceSansBold
 TextN.Text = "Injected!"
 TextN.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextN.TextSize = 16.000
+TextN.ZIndex = 2
 
 NameW.Name = "NameW"
 NameW.Parent = Main
@@ -71,6 +72,7 @@ NameW.Text = "Asteroid X"
 NameW.TextColor3 = Color3.fromRGB(255, 255, 255)
 NameW.TextSize = 16.000
 NameW.TextXAlignment = Enum.TextXAlignment.Left
+NameW.ZIndex = 2
 
 -- Scripts:
 
